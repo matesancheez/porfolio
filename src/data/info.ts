@@ -83,8 +83,8 @@ export const info = {
       title: "Projects React",
       isFeatured: true,
       thumbnail: "/assets/images/github.jpg",
-      githubUrl: "https://github.com/matesancheez/Proyectos_React",
-      liveUrl: "https://github.com/matesancheez/Proyectos_React",
+      githubUrl: "https://github.com/matesancheez/Proyectos-React",
+      liveUrl: "https://github.com/matesancheez/Proyectos-React",
     },
   ],
 };
