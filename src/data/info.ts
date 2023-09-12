@@ -80,7 +80,7 @@ export const info = {
       liveUrl: "https://miabu-production.up.railway.app/",
     },
     {
-      title: "Projects React",
+      title: "React-projects",
       isFeatured: true,
       thumbnail: "/assets/images/github.jpg",
       githubUrl: "https://github.com/matesancheez/Proyectos-React",
