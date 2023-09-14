@@ -68,7 +68,7 @@ export const info = {
     {
       title: "V&S Odontologia",
       isFeatured: true,
-      thumbnail: "/assets/images/pt.png",
+      thumbnail: "/assets/images/vsOdontologia.png",
       githubUrl: "https://github.com/matesancheez/vsodontologia",
       liveUrl: "https://matesancheez.github.io/vsodontologia/",
     },
@@ -82,7 +82,7 @@ export const info = {
     {
       title: "React-projects",
       isFeatured: true,
-      thumbnail: "/assets/images/github.jpg",
+      thumbnail: "/assets/images/react_banner.png",
       githubUrl: "https://github.com/matesancheez/Proyectos-React",
       liveUrl: "https://github.com/matesancheez/Proyectos-React",
     },
