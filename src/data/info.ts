@@ -89,7 +89,7 @@ export const info = {
     {
       title: "Flint Marketing Agency",
       isFeatured: true,
-      thumbnail: "/assets/images/flint-logo.png",
+      thumbnail: "/assets/images/FLINT.png",
       githubUrl: "https://github.com/matesancheez/Flint",
       liveUrl: "https://www.flint.com.ar/",
     }
