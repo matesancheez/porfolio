@@ -86,5 +86,12 @@ export const info = {
       githubUrl: "https://github.com/matesancheez/Proyectos-React",
       liveUrl: "https://github.com/matesancheez/Proyectos-React",
     },
+    {
+      title: "Flint Marketing Agency",
+      isFeatured: true,
+      thumbnail: "/assets/images/flint-logo.png",
+      githubUrl: "https://github.com/matesancheez/Flint",
+      liveUrl: "https://www.flint.com.ar/",
+    }
   ],
 };
