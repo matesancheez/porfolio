@@ -2,9 +2,9 @@ export const info = {
   baseUrl: "https://astro-portfolio-uzair.vercel.app",
   name: "Mateo Sanchez",
   jobDescription: "Web Developer",
-  about: `I'm currently in my final year as a university systems information analyst. I have a passion for web development and have been honing my skills in various technologies. My toolkit includes HTML, CSS, Sass, JavaScript, React, Python, and Django. I'm also familiar with Bootstrap, Tailwind CSS, and have some basic knowledge of Astro.
-  Beyond web development, I have experience working with different programming paradigms and have a solid understanding of various operating systems like Kali Linux, Ubuntu and Window. I also have an advanced understanding of algorithms and data structures.
-  I'm enthusiastic about crafting digital experiences and continually strive to expand my skillset.
+  about: `I'm currently in my final year as a university systems information analyst. I have a passion for web development and have been honing my skills in both frontend and backend technologies. My toolkit includes HTML, CSS, Sass, JavaScript, React, Python, and Django. I'm also experienced with Express, SQL, and the Astro framework.
+I'm familiar with Bootstrap, Tailwind CSS, and have worked with various backend development languages. Beyond web development, I have experience with different programming paradigms and a solid understanding of operating systems like Kali Linux, Ubuntu, and Windows. I also have an advanced understanding of algorithms and data structures.
+I'm enthusiastic about crafting digital experiences and continually strive to expand my skillset.
   `,
 
   experience: [
@@ -32,7 +32,7 @@ export const info = {
       startDate: "2021",
       endDate: "Now",
       description: [
-        "Diploma of Associate Engineering,  Computer Information Technology (CIT)",
+        "Diploma of Associate Engineering, Computer Information Technology (CIT)",
       ],
     },
     {
@@ -54,13 +54,13 @@ export const info = {
       location: "Salta, Argentina",
       startDate: "2013",
       endDate: "2018",
-      description: ["Bachelor,  Economy"],
+      description: ["Bachelor’s Degree in Economics"],
     },
   ],
 
   socialMedia: {
     github: "https://github.com/matesancheez",
-    email: "matesanchz@7gmail.com",
+    email: "matesanchz@gmail.com",
     linkedin: "https://www.linkedin.com/in/mateo-sanchez-40a3761a2/",
   },
 
@@ -77,21 +77,29 @@ export const info = {
       isFeatured: true,
       thumbnail: "/assets/images/miabu.png",
       githubUrl: "https://github.com/matesancheez/MiAbu",
-      liveUrl: "https://miabu-production.up.railway.app/",
-    },
-    {
-      title: "React-projects",
-      isFeatured: true,
-      thumbnail: "/assets/images/react_banner.png",
-      githubUrl: "https://github.com/matesancheez/Proyectos-React",
-      liveUrl: "https://github.com/matesancheez/Proyectos-React",
+      liveUrl: "https://github.com/matesancheez/MiAbu",
     },
     {
       title: "Flint Marketing Agency",
       isFeatured: true,
       thumbnail: "/assets/images/FLINT.png",
       githubUrl: "https://github.com/matesancheez/Flint",
-      liveUrl: "https://www.flint.com.ar/",
+      liveUrl: "https://flint-mateos-projects-c05d1563.vercel.app/",
+    },
+    {
+      title: "Doyle - Fotografia inmobiliaria",
+      isFeatured: true,
+      thumbnail: "/assets/images/Doyle.png",
+      githubUrl: "https://github.com/matesancheez/Doyle",
+      liveUrl: "https://doyle.vercel.app/",
+    },
+    
+    {
+      title: "React-projects",
+      isFeatured: true,
+      thumbnail: "/assets/images/react_banner.png",
+      githubUrl: "https://github.com/matesancheez/Proyectos-React",
+      liveUrl: "https://github.com/matesancheez/Proyectos-React",
     }
   ],
 };
