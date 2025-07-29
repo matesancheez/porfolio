@@ -34,14 +34,14 @@ const { title, description, ogImageUrl } = Astro.props as IMetaHead;
 {title && <meta property="og:type" content="website" />}
 {
   title && (
-    <meta property="og:url" content={`${info.baseUrl}${Astro.url.pathname}`} />
+    <meta property="og:url" content={`${Astro.url.pathname}`} />
   )
 }
 {title && <meta property="og:title" content={`${title} - ${info.name}`} />}
 {description && <meta property="og:description" content={description} />}
 {
   ogImageUrl && (
-    <meta property="og:image" content={`${info.baseUrl}${ogImageUrl}`} />
+    <meta property="og:image" content={`${ogImageUrl}`} />
   )
 }
 
