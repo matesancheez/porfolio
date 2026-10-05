@@ -7,6 +7,7 @@ export interface IMetaHead {
 export interface IHeroProps {
   name: string;
   about: string;
+  greeting?: string;
 }
 
 export interface IExperience {
@@ -35,3 +36,19 @@ export interface IProjects {
 export interface IProjectDetails {
   projectDetail: IProject;
 }
+
+export interface IInfo {
+  baseUrl: string;
+  name: string;
+  jobDescription: string;
+  about: string;
+  experience: IExperience[];
+  education: IExperience[];
+  socialMedia: {
+    github: string;
+    email: string;
+    linkedin: string;
+  };
+  projects: IProject[];
+}
+

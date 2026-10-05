@@ -1,6 +1,22 @@
 ---
 import { info } from "@data";
 import { createLogo } from "@utils";
+
+interface Props {
+  lang?: "en" | "es";
+}
+
+const { lang } = Astro.props;
+const currentPath = Astro.url.pathname.replace(/\/$/, "");
+const isSpanish = lang === "es" || currentPath.startsWith("/es");
+
+let targetUrl = "/";
+if (isSpanish) {
+  const stripped = currentPath.replace(/^\/es/, "");
+  targetUrl = stripped === "" ? "/" : stripped;
+} else {
+  targetUrl = currentPath === "" || currentPath === "/" ? "/es" : `/es${currentPath}`;
+}
 ---
 
 <header
@@ -8,29 +24,42 @@ import { createLogo } from "@utils";
 >
   <a
     class="text-2xl dark:text-light font-semibold dark:font-semibold font-outfit"
-    href="/"
+    href={isSpanish ? "/es" : "/"}
     >{createLogo(info.name)}.
   </a>
   <nav>
-    <ul class="flex items-center">
+    <ul class="flex items-center gap-1 sm:gap-2">
       <li>
-        <a class="p-4 dark:text-light block text-lg" href="/projects"
-          >Projects</a
+        <a
+          class="p-2 sm:p-4 dark:text-light block text-base sm:text-lg hover:text-orange-500 transition-colors"
+          href={isSpanish ? "/es/projects" : "/projects"}
         >
+          {isSpanish ? "Proyectos" : "Projects"}
+        </a>
       </li>
-      <!-- <li>
-        <a class="p-4 dark:text-light block text-lg" href="/contact">Contact</a>
-      </li> -->
+      <li>
+        <a
+          id="lang-toggle"
+          aria-label={isSpanish ? "Cambiar a Inglés" : "Switch to Spanish"}
+          href={targetUrl}
+          class="flex items-center gap-1.5 font-outfit text-xs sm:text-sm font-semibold px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg border border-slate-300 dark:border-[#303030] bg-slate-100 dark:bg-[#202020] text-neutral-800 dark:text-light hover:border-orange-500 dark:hover:border-orange-500 transition-all"
+        >
+          <span class={!isSpanish ? "text-orange-500 font-bold" : "opacity-50"}>EN</span>
+          <span class="opacity-30">/</span>
+          <span class={isSpanish ? "text-orange-500 font-bold" : "opacity-50"}>ES</span>
+        </a>
+      </li>
       <li>
         <button
           aria-label="theme-button"
           id="theme-button"
-          class="dark:text-light rounded-lg p-4 ml-2 bg-slate-100 dark:bg-[#202020]"
+          class="dark:text-light rounded-lg p-2.5 sm:p-4 ml-1 sm:ml-2 bg-slate-100 dark:bg-[#202020] border border-slate-300 dark:border-[#303030] hover:border-orange-500 dark:hover:border-orange-500 transition-all flex items-center justify-center"
         ></button>
       </li>
     </ul>
   </nav>
 </header>
+
 
 <script is:inline>
   const moon = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
@@ -78,4 +107,12 @@ import { createLogo } from "@utils";
   };
 
   themeButton.addEventListener("click", darkModeHandler);
+
+  const langToggle = document.getElementById("lang-toggle");
+  if (langToggle) {
+    langToggle.addEventListener("click", () => {
+      const isCurrentlyEs = window.location.pathname.startsWith("/es");
+      localStorage.setItem("preferred-lang", isCurrentlyEs ? "en" : "es");
+    });
+  }
 </script>

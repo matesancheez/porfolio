@@ -1,12 +1,19 @@
 ---
 import { info } from "@data";
+
+interface Props {
+  lang?: "en" | "es";
+}
+
+const { lang } = Astro.props;
+const isSpanish = lang === "es" || Astro.url.pathname.startsWith("/es");
 ---
 
 <footer
   class="container flex sm:flex-row flex-col justify-between items-center mb-8 sm:mb-4"
 >
   <p class="dark:text-light text-right my-8">
-    Edited by <strong>Mateo Sanchez</strong>
+    {isSpanish ? "Editado por" : "Edited by"} <strong>{info.name}</strong>
   </p>
   <div class="grid grid-cols-3 gap-4">
     <a
@@ -58,7 +65,7 @@ import { info } from "@data";
     </a>
     <a
       aria-label="Social Media"
-      href={info.socialMedia.email}
+      href={`mailto:${info.socialMedia.email.replace(/^mailto:/, "")}`}
       target="_blank"
       class="footer-icons"
     >

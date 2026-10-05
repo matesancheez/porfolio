@@ -2,10 +2,15 @@
 import Footer from "@components/general/Footer.astro";
 import Navbar from "@components/general/Navbar.astro";
 import "../styles/style.css";
+interface Props {
+  lang?: "en" | "es";
+}
+
+const { lang = "en" } = Astro.props;
 ---
 
-<Navbar />
+<Navbar lang={lang} />
 <main class="container">
   <slot />
 </main>
-<Footer />
+<Footer lang={lang} />
